@@ -1,0 +1,46 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+:root {
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.nav-pr {
+    justify-content: space-between;
+    background-color: blue;
+}
+
+.stripe-movies {
+    height: 20rem;
+    width: 100%;
+    background-color: aquamarine;
+    overflow: scroll;
+}
+
+.card-movie {
+    height: 10rem;
+    width: 7rem;
+    /* background-color: beige; */
+    margin: 1rem;
+    flex-shrink: 0;
+}
+
+.card-movie-img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-movie-title {
+    margin: 0;
+}
+
+/* for movie page */
+
+.movie_img {
+    width: 100%;
+}
