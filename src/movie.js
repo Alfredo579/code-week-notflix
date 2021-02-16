@@ -64,9 +64,9 @@ async function renderDetails() {
         title.textContent = `${result.title}`
 
         const date = new Date(result.release_date)
-        year.textContent = date.getFullYear();
+        year.textContent = `Anno: ${date.getFullYear()}`;
 
-        movieLength.textContent = `${result.runtime}`
+        movieLength.textContent = `durata: ${result.runtime} minuti`
         description.textContent = `${result.overview}`
         
     })
@@ -74,13 +74,13 @@ async function renderDetails() {
     await getCredits().then((result) => {
 
         const actors = result.cast.slice(0, 5).map((actor) => actor.name);
-        cast.textContent = `${actors}`;
+        cast.textContent = `cast: ${actors}`;
 
         const crew = result.crew
         .filter((person) => person.job === "Director")
         .map((person) => person.name);
 
-        direction.textContent = `${crew}`;
+        direction.textContent = `director: ${crew}`;
 
     })
 

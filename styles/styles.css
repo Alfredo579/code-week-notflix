@@ -4,35 +4,76 @@
 
 :root {
     font-family: 'Hammersmith One', sans-serif;
+    background-color: var(--gray-background);
+    color: var(--font-color);
+    --font-color: rgb(233, 232, 232);
+    --black-background: rgb(46, 45, 45);
+    --gray-background: rgb(61, 59, 59);
+    --star-size: 22px;
+    --star-color: rgba(105, 103, 103, 0.459);
+    --star-background: #fc0;
+
 }
 
 .flex-row {
     display: flex;
 }
 
-.nav-pr {
+.space-between {
     justify-content: space-between;
-    background-color: blue;
 }
 
+.nav-pr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--black-background);
+    color: var(--font-color);
+}
+
+.search {
+    margin-right: 1rem;
+}
+
+.home-link {
+    text-decoration: none;
+    color: rgb(233, 7, 7);
+    margin-left:  1rem;
+}
+
+.go-down {
+    height: 80px;
+}
 .stripe-movies {
     height: 20rem;
     width: 100%;
-    background-color: aquamarine;
+    background-color: var(--black-background);
     overflow: scroll;
 }
 
+.card-link {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
 .card-movie {
-    height: 10rem;
-    width: 7rem;
+    height: 16rem;
+    width: 9rem;
     /* background-color: beige; */
     margin: 1rem;
     flex-shrink: 0;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 15px -3px #000000; 
+    box-shadow: 5px 5px 15px -3px #000000;
 }
 
 .card-movie-img {
-    height: 100%;
+    height: 65%;
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .card-movie-title {
@@ -43,4 +84,36 @@
 
 .movie_img {
     width: 100%;
+}
+
+
+
+.stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+
+    display: inline-block;
+    font-size: var(--star-size);
+    font-family: Times; 
+    /* // make sure ★ appears correctly */
+    line-height: 1;
+    
+
+
+}
+
+.stars:before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.movie_title,
+.movie_year,
+.movie_length,
+.movie_description,
+.movie_cast,
+.movie_direction {
+    padding: .5rem;
 }

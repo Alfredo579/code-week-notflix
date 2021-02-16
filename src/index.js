@@ -55,19 +55,26 @@ function renderCard(movieSection) {
         const card = document.createElement("div")
         const img = document.createElement("img");
         const title = document.createElement("h4")
+        const stars = document.createElement("div")
 
+        link.classList.add("card-link")
         card.classList.add("card-movie")
         img.classList.add("card-movie-img")
         title.classList.add("card-movie-title")
+        stars.classList.add("stars")
 
         movieSection.appendChild(link)
         link.appendChild(card)
         card.appendChild(img)
+        card.appendChild(stars)
         card.appendChild(title)
+
+
         
         link.href = `movie.html?id=${movie.id}`
         title.textContent = movie.title?movie.title:movie.name
         img.src = `${base_url_poster}${movie.poster_path}`
+        stars.style = `--rating: ${movie.vote_average/2}`
     });
 
 }
