@@ -19,7 +19,7 @@ const state = {
     }
 }
 
-
+// get data Details movie 
 async function getDetails() {
     const {api_key} = state.config;
     const {base_url} = state.config; 
@@ -53,7 +53,7 @@ async function getCredits() {
     }
 
 }
-
+// render page with details and credit
 async function renderDetails() {
 
     await getDetails().then ((result) => {

@@ -10,13 +10,11 @@ const state = {
         base_url: "https://api.themoviedb.org/3",
         base_url_poster: "https://image.tmdb.org/t/p/w500"
     },
-    // movies: {},
-    // tv: {}
 }
 
 let arrMovie = []
 
-
+// get data to API
 function getUrl(path) {
     
     const {api_key} = state.config;
@@ -24,6 +22,7 @@ function getUrl(path) {
     
     return `${base_url}${path}?api_key=${api_key}`;
 }
+
 const moviesPopular = getUrl("/movie/popular")
 const moviesTopRated = getUrl("/movie/top_rated")
 const uncoming = getUrl("/movie/upcoming")
@@ -43,8 +42,7 @@ async function getData(url) {
     }
     
 }
-
-// getData(`${moviesPopular}`)
+// render card with movie info: img, title, stars
 
 function renderCard(movieSection) {
 
@@ -78,7 +76,7 @@ function renderCard(movieSection) {
     });
 
 }
-
+// render card on stripe
 async function renderStripe(moviesFamily, moviesSection) {
 
     const result = await getData(moviesFamily).then ((result) => {

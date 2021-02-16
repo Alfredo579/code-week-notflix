@@ -1,4 +1,4 @@
-
+/* utilities */
 
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
@@ -23,6 +23,8 @@
     justify-content: space-between;
 }
 
+/* nav primary */
+
 .nav-pr {
     position: fixed;
     top: 0;
@@ -42,9 +44,12 @@
     margin-left:  1rem;
 }
 
+/* this for move body down becouse navbar cover him */
 .go-down {
     height: 80px;
 }
+
+/* stripe styles */
 .stripe-movies {
     height: 20rem;
     width: 100%;
@@ -52,6 +57,7 @@
     overflow: scroll;
 }
 
+/* card movie */
 .card-link {
     text-decoration: none;
     color: var(--font-color);
@@ -76,18 +82,6 @@
     border-top-right-radius: 10px;
 }
 
-.card-movie-title {
-    margin: 0;
-}
-
-/* for movie page */
-
-.movie_img {
-    width: 100%;
-}
-
-
-
 .stars {
     --percent: calc(var(--rating) / 5 * 100%);
 
@@ -107,6 +101,17 @@
     background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+.card-movie-title {
+    margin: 0;
+}
+
+/* for movie page */
+
+.movie_img {
+    width: 100%;
 }
 
 .movie_title,
