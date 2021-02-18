@@ -51,6 +51,17 @@ async function getData(url) {
     }
     
 }
+
+// this for delay callback 
+function debounce( callback, delay ) {
+    let timeout;
+    return function() {
+        clearTimeout( timeout );
+        timeout = setTimeout( callback, delay );
+    }
+}
+
+
 // render card with movie info: img, title, stars
 
 function renderCard(movieSection) {
@@ -110,23 +121,19 @@ function renderSearchMovie() {
     }
 }
 
+
+
+
 btnSearch.addEventListener("click", (evt) => {
     toastSearch.classList.toggle("is-show");
     evt.preventDefault;
 })
 
-inputSearchMovie.addEventListener("input", (evt) => 
-    setTimeout(() => {
-        
-        console.log(inputSearchMovie.value);
-        renderSearchMovie();
-        evt.preventDefault();
-        // toastSearch.classList.toggle("is-show");
-        
-}, 1000))
-
+inputSearchMovie.addEventListener("input", debounce(renderSearchMovie, 500))
 
 
 renderStripe(moviesPopular, stripeMoviesPopular);
 renderStripe(moviesTopRated, stripeMoviesTopRated);
 renderStripe(moviesUncoming, stripeUncoming);
+
+
