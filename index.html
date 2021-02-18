@@ -15,13 +15,22 @@
             <a class="home-link" href="#home">
                 <h1 class="logo">NoTFLIX</h1>
             </a>
-                <h2 class="search">
+                <h2 class="search-toggle">
                     <i class="fas fa-search"></i>
                 </h2>
         </nav>
     </header>
     <div class="go-down"></div>
     <main class="container">
+        <div class="search-toast is-hidden">
+                <input id="input-movie" type="text">
+        </div>
+        <!-- <h3 class="title-stripe none-display">Result Search</h3> -->
+        <article> 
+            <section class="stripe-movies search-movies flex-row">
+                
+            </section>
+        </article>  
         <article> 
             <h3 class="title-stripe">Movie Popular</h3>
             <section class="stripe-movies popular-movies flex-row">
@@ -29,8 +38,6 @@
             </section>
         </article>  
 
-        <!-- stars https://www.youtube.com/watch?v=dPCj6Qkq13Y -->
-       
         <article> 
             <h3 class="title-stripe">Movie Top Rated</h3>
             <section class="stripe-movies topRated-movies flex-row">
