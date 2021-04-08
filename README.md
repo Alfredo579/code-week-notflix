@@ -1,6 +1,7 @@
 # Notflix
 
-Notflix rendering so many Movie from MovieDB API 
+Notflix rendering so many Movie from MovieDB API. 
+you can search for the results in the carousels divided by genre and find a description page of the movie
 
 
 
