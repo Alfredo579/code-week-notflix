@@ -14,7 +14,7 @@ let arrMovie = [];
 
 const state = {
     config: {
-        api_key: "4c92ecb713570027d15842178d4b610b",
+         // api_key: "Api key here",
         base_url: "https://api.themoviedb.org/3",
         base_url_poster: "https://image.tmdb.org/t/p/w500"
     },
